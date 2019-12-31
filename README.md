@@ -13,6 +13,10 @@ Download the ``.zip`` file of this repository, and copy the ``leaf`` file in a c
 
 Download the ``.zip file``, and copy the ``leaf`` file in your home directory so that you can run the program from the the command line with the following: ``./leaf``
 
+**Mac Only**
+
+After open the ``leaf`` file for the first time, you may get an error message. To remove this, and open the program, navigate to ``System Preferences`` > ``Security and Privacy`` > ``General``. At the bottom of the window, click ``Open Anyway`` next to ``leaf``
+
 ---
 
 ## Categories and Functions
