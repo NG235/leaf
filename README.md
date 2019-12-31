@@ -3,6 +3,18 @@ Leaf is a small C program that has multiple built in functions across 3 categori
 
 ---
 
+## Installing
+
+**General**
+
+Download the ``.zip`` file of this repository, and copy the ``leaf`` file in a convenient stop on your computer.
+
+**Mac and Linux Only**
+
+Download the ``.zip file``, and copy the ``leaf`` file in your home directory so that you can run the program from the the command line with the following: ``./leaf``
+
+---
+
 ## Categories and Functions
 
 ### Calculators
