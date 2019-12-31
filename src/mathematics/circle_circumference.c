@@ -3,10 +3,10 @@
 
 void circleCircumference()
 {
-    float radius;
+    long double radius;
 
     printf("\nEnter circle radius: ");
-    scanf("%f", &radius);
+    scanf("%Lf", &radius);
 
-    printf("\nResult: %f\n", 2 * M_PI * radius);
+    printf("\nResult: %.2Lf\n", 2 * M_PI * radius);
 }

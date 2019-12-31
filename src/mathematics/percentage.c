@@ -2,13 +2,13 @@
 
 void percentage()
 {
-    float whole, percentage;
+    long double whole, percentage;
 
     printf("\nEnter whole ammount: ");
-    scanf("%f", &whole);
+    scanf("%Lf", &whole);
 
     printf("\nEnter percentage of whole ammount: ");
-    scanf("%f", &percentage);
+    scanf("%Lf", &percentage);
 
-    printf("\nResult: %f\n", (whole / 100) * percentage);
+    printf("\nResult: %.2Lf\n", (whole / 100) * percentage);
 }

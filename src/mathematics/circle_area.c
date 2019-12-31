@@ -3,10 +3,10 @@
 
 void circleArea()
 {
-    float radius;
+    long double radius;
 
     printf("\nEnter circle radius: ");
-    scanf("%f", &radius);
+    scanf("%Lf", &radius);
 
-    printf("\nResult: %f\n", M_PI * (radius * radius));
+    printf("\nResult: %.2Lf\n", M_PI * (radius * radius));
 }

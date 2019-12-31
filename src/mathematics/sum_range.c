@@ -17,5 +17,5 @@ void sumRange()
         sum += i;
     }
 
-    printf("\nResult: %.1Lf\n", (start + end) * (end / 2));
+    printf("\nResult: %.2Lf\n", (start + end) * (end / 2));
 }

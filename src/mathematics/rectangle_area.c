@@ -2,13 +2,13 @@
 
 void rectangleArea()
 {
-    float side1, side2;
+    long double side1, side2;
 
     printf("\nEnter the length of one side: ");
-    scanf("%f", &side1);
+    scanf("%Lf", &side1);
 
     printf("\nEnter the length of another side: ");
-    scanf("%f", &side2);
+    scanf("%Lf", &side2);
 
-    printf("\nResult: %f\n", side1 * side2);
+    printf("\nResult: %.2Lf\n", side1 * side2);
 }

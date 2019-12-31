@@ -2,10 +2,10 @@
 
 void cube()
 {
-    float input;
+    long double input;
 
     printf("\nEnter number to cube: ");
-    scanf("%f", &input);
+    scanf("%Lf", &input);
 
-    printf("\nResult: %f\n", input * input * input);
+    printf("\nResult: %.2Lf\n", input * input * input);
 }

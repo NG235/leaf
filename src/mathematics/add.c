@@ -2,13 +2,13 @@
 
 void add()
 {
-    float input1, input2;
+    long double input1, input2;
 
     printf("\nEnter first number to add: ");
-    scanf("%f", &input1);
+    scanf("%Lf", &input1);
 
     printf("\nEnter second number to add: ");
-    scanf("%f", &input2);
+    scanf("%Lf", &input2);
 
-    printf("\nResult: %f\n", input1 + input2);
+    printf("\nResult: %.2Lf\n", input1 + input2);
 }

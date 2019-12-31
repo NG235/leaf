@@ -2,10 +2,10 @@
 
 void squareArea()
 {
-    float side;
+    long double side;
 
     printf("\nEnter the length of one side: ");
-    scanf("%f", &side);
+    scanf("%Lf", &side);
 
-    printf("\nResult: %f\n", side * side);
+    printf("\nResult: %.2Lf\n", side * side);
 }
