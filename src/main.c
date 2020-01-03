@@ -1,18 +1,23 @@
 #include <stdio.h>
-
+#include "types.h"
 #include "coloredPrinting.h"
-#include "calculators.h"
-#include "converters.h"
-#include "mathematics.h"
+#include "calculators.c"
+#include "converters.c"
+#include "mathematics.c"
 
 int main(void)
 {
     green("\nWelcome to Leaf!\n\n");
 
-    char categories[3][100] = {
+    char categories[][100] = {
         "Calculators",
         "Converters",
         "Mathematics"};
+
+    func functions[sizeof(categories)] = {
+        &calculators,
+        &converters,
+        &mathematics};
 
     cyan("Categories:\n");
     for (int i = 0; i <= 2; i += 1)
@@ -24,23 +29,12 @@ int main(void)
     yellow("\nEnter Category Number: ");
     scanf("%d", &category);
 
-    while (category < 0 || category > 2)
+    while (category < 0 || category > sizeof(categories))
     {
         red("\nInvalid Category Number!\n");
         printf("\nEnter Category Number: ");
         scanf("%d", &category);
     }
 
-    if (category == 0)
-    {
-        calculators();
-    }
-    else if (category == 1)
-    {
-        converters();
-    }
-    else if (category == 2)
-    {
-        mathematics();
-    }
+    functions[category]();
 }
