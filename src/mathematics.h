@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "types.h"
 
 #include "mathematics/add.c"
 #include "mathematics/circle_area.c"
@@ -35,6 +36,23 @@ void mathematics()
         "Subtract two Numbers",
         "Calculate sum of Numbers in Range"};
 
+    func functions[sizeof(items)] = {
+        &add,
+        &circleArea,
+        &circleCircumference,
+        &cube,
+        &divide,
+        &factorial,
+        &multiply,
+        &percentage,
+        &rectangleArea,
+        &rectanglePerimeter,
+        &squareArea,
+        &squarePerimeter,
+        &square,
+        &subtract,
+        &sumRange};
+
     cyan("\nItems:\n");
     for (int i = 0; i <= 14; i += 1)
     {
@@ -45,71 +63,12 @@ void mathematics()
     yellow("\nEnter Item Number: ");
     scanf("%d", &item);
 
-    while (item < 0 || item > 13)
+    while (item < 0 || item > sizeof(items))
     {
         red("\nInvalid Item Number!\n");
         printf("\nEnter Item Number: ");
         scanf("%d", &item);
     }
 
-    if (item == 0)
-    {
-        add();
-    }
-    else if (item == 1)
-    {
-        circleArea();
-    }
-    else if (item == 2)
-    {
-        circleCircumference();
-    }
-    else if (item == 3)
-    {
-        cube();
-    }
-    else if (item == 4)
-    {
-        divide();
-    }
-    else if (item == 5)
-    {
-        factorial();
-    }
-    else if (item == 6)
-    {
-        multiply();
-    }
-    else if (item == 7)
-    {
-        percentage();
-    }
-    else if (item == 8)
-    {
-        rectangleArea();
-    }
-    else if (item == 9)
-    {
-        rectanglePerimeter();
-    }
-    else if (item == 10)
-    {
-        squareArea();
-    }
-    else if (item == 11)
-    {
-        squarePerimeter();
-    }
-    else if (item == 12)
-    {
-        square();
-    }
-    else if (item == 13)
-    {
-        subtract();
-    }
-    else if (item == 14)
-    {
-        sumRange();
-    }
+    functions[item]();
 }

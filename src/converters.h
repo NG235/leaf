@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "types.h"
 
 #include "converters/celsius-fahrenheit.c"
 #include "converters/fahrenheit-celsius.c"
@@ -8,6 +9,10 @@ void converters()
     char items[2][100] = {
         "Celsius to Fahrenheit",
         "Fahrenheit to Celsius"};
+
+    func functions[sizeof(items)] = {
+        &celsiusFahrenheit,
+        &fahrenheitCelsius};
 
     cyan("\nItems:\n");
     for (int i = 0; i <= 1; i += 1)
@@ -19,19 +24,12 @@ void converters()
     yellow("\nEnter Item Number: ");
     scanf("%d", &item);
 
-    while (item < 0 || item > 1)
+    while (item < 0 || item > sizeof(items))
     {
         red("\nInvalid Item Number!\n");
         printf("\nEnter Item Number: ");
         scanf("%d", &item);
     }
 
-    if (item == 0)
-    {
-        celsiusFahrenheit();
-    }
-    else if (item == 1)
-    {
-        fahrenheitCelsius();
-    }
+    functions[item]();
 }
