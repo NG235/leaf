@@ -5,15 +5,15 @@ Leaf is a small C program that has many built in functions across multiple categ
 
 ## Installing
 
-**General**
+**Windows**
 
-Download the ``.zip`` file of this repository, and copy the ``leaf`` file in a convenient stop on your computer.
+There is currently no official build of Leaf for Windows.
 
-**Mac and Linux Only**
+**Mac and Linux**
 
 Download the ``.zip file``, and copy the ``leaf`` file in your home directory so that you can run the program from the the command line with the following: ``./leaf``
 
-**Mac Only**
+**Mac**
 
 After open the ``leaf`` file for the first time, you may get an error message. To remove this, and open the program, navigate to ``System Preferences`` > ``Security and Privacy`` > ``General``. At the bottom of the window, click ``Open Anyway`` next to ``leaf``
 
