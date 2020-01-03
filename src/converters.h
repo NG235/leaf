@@ -6,7 +6,7 @@
 
 void converters()
 {
-    char items[2][100] = {
+    char items[][100] = {
         "Celsius to Fahrenheit",
         "Fahrenheit to Celsius"};
 

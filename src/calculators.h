@@ -6,7 +6,7 @@
 
 void calculators()
 {
-    char items[2][100] = {
+    char items[][100] = {
         "BMI (Body Mass Index)",
         "Tax"};
 

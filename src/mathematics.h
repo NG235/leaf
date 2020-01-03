@@ -19,7 +19,7 @@
 
 void mathematics()
 {
-    char items[15][100] = {
+    char items[][100] = {
         "Add two Numbers",
         "Area of a Cirlce",
         "Circumference of a Circle",
