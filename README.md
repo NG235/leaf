@@ -35,6 +35,7 @@ After open the ``leaf`` file for the first time, you may get an error message. T
 - Circumference of a Circle
 - Cube Number
 - Divide two Numbers
+- Calculate Factorial
 - Multiply two Numbers
 - Get Percentage Ammount
 - Area of a Rectangle

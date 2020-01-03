@@ -5,6 +5,7 @@
 #include "mathematics/circle_circumference.c"
 #include "mathematics/cube.c"
 #include "mathematics/divide.c"
+#include "mathematics/factorial.c"
 #include "mathematics/multiply.c"
 #include "mathematics/percentage.c"
 #include "mathematics/rectangle_area.c"
@@ -17,12 +18,13 @@
 
 void mathematics()
 {
-    char items[14][100] = {
+    char items[15][100] = {
         "Add two Numbers",
         "Area of a Cirlce",
         "Circumference of a Circle",
         "Cube Number",
         "Divide two Numbers",
+        "Caclulate Factorial",
         "Multiply two Numbers",
         "Get Percentage Ammount",
         "Area of a Rectangle",
@@ -34,7 +36,7 @@ void mathematics()
         "Calculate sum of Numbers in Range"};
 
     cyan("\nItems:\n");
-    for (int i = 0; i <= 13; i += 1)
+    for (int i = 0; i <= 14; i += 1)
     {
         printf("%d \t %s \n", i, items[i]);
     }
@@ -72,37 +74,41 @@ void mathematics()
     }
     else if (item == 5)
     {
-        multiply();
+        factorial();
     }
     else if (item == 6)
     {
-        percentage();
+        multiply();
     }
     else if (item == 7)
     {
-        rectangleArea();
+        percentage();
     }
     else if (item == 8)
     {
-        rectanglePerimeter();
+        rectangleArea();
     }
     else if (item == 9)
     {
-        squareArea();
+        rectanglePerimeter();
     }
     else if (item == 10)
     {
-        squarePerimeter();
+        squareArea();
     }
     else if (item == 11)
     {
-        square();
+        squarePerimeter();
     }
     else if (item == 12)
     {
-        subtract();
+        square();
     }
     else if (item == 13)
+    {
+        subtract();
+    }
+    else if (item == 14)
     {
         sumRange();
     }
