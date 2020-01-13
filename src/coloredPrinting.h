@@ -1,44 +1,25 @@
-#include <stdio.h>
+#include <iostream>
 
-void red(char input[100])
-{
-    printf("\033[0;31m");
-    printf("%s", input);
-    printf("\033[0m");
+void red(std::string input) {
+    std::cout << "\033[0;31m" << input << "\033[0m";
 }
 
-void green(char input[100])
-{
-    printf("\033[0;32m");
-    printf("%s", input);
-    printf("\033[0m");
+void green(std::string input) {
+    std::cout << "\033[0;32m" << input << "\033[0m";
 }
 
-void yellow(char input[100])
-{
-    printf("\033[0;33m");
-    printf("%s", input);
-    printf("\033[0m");
+void yellow(std::string input) {
+    std::cout << "\033[0;33m" << input << "\033[0m";
 }
 
-void blue(char input[100])
-{
-    printf("\033[0;34m");
-    printf("%s", input);
-    printf("\033[0m");
+void blue(std::string input) {
+    std::cout << "\033[0;34m" << input << "\033[0m";
 }
 
-void megenta(char input[100])
-{
-    printf("\033[0;35m");
-    printf("%s", input);
-    printf("\033[0m");
+void magenta(std::string input) {
+    std::cout << "\033[0;35m" << input << "\033[0m";
 }
 
-
-void cyan(char input[100])
-{
-    printf("\033[0;36m");
-    printf("%s", input);
-    printf("\033[0m");
+void cyan(std::string input) {
+    std::cout << "\033[0;36m" << input << "\033[0m";
 }

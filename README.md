@@ -39,7 +39,7 @@ After open the ``leaf`` file for the first time, you may get an error message. T
 - Multiply two Numbers
 - Get Percentage Ammount
 - Area of a Rectangle
-- Perimter of a Rectangle
+- Perimeter of a Rectangle
 - Area of a Square
 - Perimeter of a Square
 - Square Number

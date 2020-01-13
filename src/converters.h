@@ -1,2 +1,2 @@
-#include "converters/celsius-fahrenheit.c"
-#include "converters/fahrenheit-celsius.c"
+#include "converters/celsius-fahrenheit.cpp"
+#include "converters/fahrenheit-celsius.cpp"

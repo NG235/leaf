@@ -1,27 +1,29 @@
-#include <stdio.h>
+#include <iostream>
 #include "types.h"
 #include "mathematics.h"
 
 void mathematics()
 {
-    char items[][100] = {
+    int item;
+    
+    std::string items[] = {
         "Add two Numbers",
-        "Area of a Cirlce",
+        "Area of a Circle",
         "Circumference of a Circle",
         "Cube Number",
-        "Divide two Numbers",
-        "Caclulate Factorial",
+        "Divide Number",
+        "Calculate Factorial",
         "Multiply two Numbers",
         "Get Percentage Ammount",
         "Area of a Rectangle",
-        "Perimter of a Rectangle",
+        "Perimeter of a Rectangle",
         "Area of a Square",
         "Perimeter of a Square",
         "Square Number",
         "Subtract two Numbers",
         "Calculate sum of Numbers in Range"};
 
-    func functions[sizeof(items)] = {
+    func functions[] = {
         &add,
         &circleArea,
         &circleCircumference,
@@ -39,20 +41,19 @@ void mathematics()
         &sumRange};
 
     cyan("\nItems:\n");
-    for (int i = 0; i <= 14; i += 1)
+    for (int i = 0; i <= 14; ++i)
     {
-        printf("%d \t %s \n", i, items[i]);
+        std::cout << i << "\t" << items[i] << std::endl;
     }
 
-    int item;
     yellow("\nEnter Item Number: ");
-    scanf("%d", &item);
+    std::cin >> item;
 
-    while (item < 0 || item > sizeof(items))
+    while (item < 0 || item > 14)
     {
         red("\nInvalid Item Number!\n");
-        printf("\nEnter Item Number: ");
-        scanf("%d", &item);
+        yellow("\nEnter Item Number: ");
+        std::cin >> item;
     }
 
     functions[item]();
