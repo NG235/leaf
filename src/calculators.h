@@ -1,2 +1,2 @@
-#include "calculators/bmi.c"
-#include "calculators/tax.c"
+#include "calculators/bmi.cpp"
+#include "calculators/tax.cpp"
