@@ -2,11 +2,13 @@
 #include "types.h"
 #include "converters.h"
 
+using std::string;
+
 void converters()
 {
     int item;
 
-    std::string items[] = {
+    string items[] = {
         "Celsius to Fahrenheit",
         "Fahrenheit to Celsius"};
 

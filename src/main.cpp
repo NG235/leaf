@@ -2,13 +2,15 @@
 #include "types.h"
 #include "functions.h"
 
+using std::string;
+
 int main()
 {
     int category;
 
     green("\nWelcome to Leaf!\n\n");
 
-    std::string categories[] = {
+    string categories[] = {
         "Calculators",
         "Converters",
         "Mathematics"};

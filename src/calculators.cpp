@@ -3,11 +3,13 @@
 #include "calculators.h"
 #include "coloredPrinting.h"
 
+using std::string;
+
 void calculators()
 {
     int item;
 
-    std::string items[] = {
+    string items[] = {
         "BMI (Body Mass Index)",
         "Tax"};
 

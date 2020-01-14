@@ -2,11 +2,13 @@
 #include "types.h"
 #include "mathematics.h"
 
+using std::string;
+
 void mathematics()
 {
     int item;
     
-    std::string items[] = {
+    string items[] = {
         "Add two Numbers",
         "Area of a Circle",
         "Circumference of a Circle",
