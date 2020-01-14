@@ -8,5 +8,16 @@ void circleArea()
     std::cout << "\nEnter circle radius: ";
     std::cin >> radius;
 
+    while (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
+
+        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+
+        std::cout << "\nEnter circle radius: ";
+        std::cin >> radius;
+    }
+
     std::cout << "\nResult: " << M_PI * (radius * radius) << "\n\n";
 }

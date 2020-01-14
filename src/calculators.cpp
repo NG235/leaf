@@ -24,9 +24,19 @@ void calculators()
     yellow("\nEnter Item Number: ");
     std::cin >> item;
 
-    while (item < 0 || item > 1)
+    while (std::cin.fail() || item < 0 || item > 1)
     {
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
+        
         red("\nInvalid Item Number!\n");
+
+        cyan("\nItems:\n");
+        for (int i = 0; i <= 1; ++i)
+        {
+            std::cout << i << "\t" << items[i] << std::endl;
+        }
+
         yellow("\nEnter Item Number: ");
         std::cin >> item;
     }

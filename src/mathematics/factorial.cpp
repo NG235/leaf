@@ -7,6 +7,17 @@ void factorial()
     std::cout << "\nEnter number to calculate factorial of: ";
     std::cin >> input;
 
+    while (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
+
+        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+
+        std::cout << "\nEnter number to calculate factorial of: ";
+        std::cin >> input;
+    }
+
     for (long i = 1; i <= input; ++i)
     {
         result *= i;

@@ -27,9 +27,19 @@ int main()
     yellow("\nEnter Category Number: ");
     std::cin >> category;
 
-    while (category < 0 || category > 2)
+    while (std::cin.fail() || category < 0 || category > 2)
     {
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
+
         red("\nInvalid Category Number!\n");
+
+        cyan("\nCategories:\n");
+        for (int i = 0; i <= 2; ++i)
+        {
+            std::cout << i << "\t" << categories[i] << std::endl;
+        }
+
         yellow("\nEnter Category Number: ");
         std::cin >> category;
     }
