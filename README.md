@@ -45,3 +45,21 @@ After open the ``leaf`` file for the first time, you may get an error message. T
 - Square Number
 - Subtract two Numbers
 - Calculate sum of Numbers in Range
+
+## Chaining Inputs
+You are able to chain inputs together when running Leaf. Look at the examples below to get an understanding of how this works.
+
+On launching Leaf, simply chain your imputs together. Enter the ``category`` number, and the ``item`` number to quickly access the item.
+
+Example (Calculators > BMI):
+
+```
+0 0
+```
+You can also add item inputs onto the chain, as long as the inputs are all in the correct order.
+
+Example (Caluclators > BMI (with inputs)):
+```
+0 0 70 1.65
+```
+The example above shows navigating to the ``BMI`` calculator, then pre-entering both ``weight`` and ``height```
