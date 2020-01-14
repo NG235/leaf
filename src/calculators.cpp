@@ -12,7 +12,7 @@ void calculators()
     string items[] = {
         "BMI (Body Mass Index)",
         "Tax"};
-
+        
     func functions[] = {
         &bmi,
         &tax};
@@ -30,7 +30,7 @@ void calculators()
     {
         std::cin.clear();
         std::cin.ignore(INT_MAX, '\n');
-        
+
         red("\nInvalid Item Number!\n");
 
         cyan("\nItems:\n");
