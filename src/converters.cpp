@@ -25,6 +25,9 @@ void converters()
     yellow("\nEnter Item Number: ");
     std::cin >> item;
 
+    std::cin.clear();
+    std::cin.ignore(INT_MAX, '\n');
+
     while (std::cin.fail() || item < 0 || item > 1)
     {
         std::cin.clear();
@@ -40,6 +43,9 @@ void converters()
 
         yellow("\nEnter Item Number: ");
         std::cin >> item;
+
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
     }
 
     functions[item]();

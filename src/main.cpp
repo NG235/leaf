@@ -29,6 +29,9 @@ int main()
     yellow("\nEnter Category Number: ");
     std::cin >> category;
 
+    std::cin.clear();
+    std::cin.ignore(INT_MAX, '\n');
+
     while (std::cin.fail() || category < 0 || category > 2)
     {
         std::cin.clear();
@@ -44,6 +47,9 @@ int main()
 
         yellow("\nEnter Category Number: ");
         std::cin >> category;
+        
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
     }
 
     functions[category]();

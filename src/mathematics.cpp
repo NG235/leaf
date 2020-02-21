@@ -51,6 +51,9 @@ void mathematics()
     yellow("\nEnter Item Number: ");
     std::cin >> item;
 
+    std::cin.clear();
+    std::cin.ignore(INT_MAX, '\n');
+
     while (std::cin.fail() || item < 0 || item > 14)
     {
         std::cin.clear();
@@ -66,6 +69,9 @@ void mathematics()
 
         yellow("\nEnter Item Number: ");
         std::cin >> item;
+
+        std::cin.clear();
+        std::cin.ignore(INT_MAX, '\n');
     }
 
     functions[item]();
