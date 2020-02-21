@@ -8,7 +8,7 @@ int main()
 {
     int category;
 
-    green("\nWelcome to Leaf!\n\n");
+    cpg::green("\nWelcome to Leaf!\n\n");
 
     string categories[] = {
         "Calculators",
@@ -20,15 +20,15 @@ int main()
         &converters,
         &mathematics};
 
-    cyan("Categories:\n");
+    cpg::cyan("Categories:\n");
     for (int i = 0; i <= 2; ++i)
     {
         std::cout << i << "\t" << categories[i] << std::endl;
     }
 
-    yellow("\nEnter Category Number: ");
+    cpg::yellow("\nEnter Category Number: ");
     std::cin >> category;
-
+    
     std::cin.clear();
     std::cin.ignore(INT_MAX, '\n');
 
@@ -37,15 +37,15 @@ int main()
         std::cin.clear();
         std::cin.ignore(INT_MAX, '\n');
 
-        red("\nInvalid Category Number!\n");
+        cpg::red("\nInvalid Category Number!\n");
 
-        cyan("\nCategories:\n");
+        cpg::cyan("\nCategories:\n");
         for (int i = 0; i <= 2; ++i)
         {
             std::cout << i << "\t" << categories[i] << std::endl;
         }
 
-        yellow("\nEnter Category Number: ");
+        cpg::yellow("\nEnter Category Number: ");
         std::cin >> category;
         
         std::cin.clear();

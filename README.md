@@ -1,5 +1,5 @@
 # Leaf
-Leaf is a small C++ program with built in functions spanning multiple categories and topics.
+Leaf is a small C++ program with built in functions spanning multiple categories
 
 ---
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "types.h"
 #include "calculators.h"
-#include "coloredPrinting.h"
+#include "cpg.h"
 
 using std::string;
 
@@ -17,13 +17,13 @@ void calculators()
         &bmi,
         &tax};
 
-    cyan("\nItems:\n");
+    cpg::cyan("\nItems:\n");
     for (int i = 0; i <= 1; ++i)
     {
         std::cout << i << "\t" << items[i] << std::endl;
     }
 
-    yellow("\nEnter Item Number: ");
+    cpg::yellow("\nEnter Item Number: ");
     std::cin >> item;
 
     std::cin.clear();
@@ -34,15 +34,15 @@ void calculators()
         std::cin.clear();
         std::cin.ignore(INT_MAX, '\n');
 
-        red("\nInvalid Item Number!\n");
+        cpg::red("\nInvalid Item Number!\n");
 
-        cyan("\nItems:\n");
+        cpg::cyan("\nItems:\n");
         for (int i = 0; i <= 1; ++i)
         {
             std::cout << i << "\t" << items[i] << std::endl;
         }
 
-        yellow("\nEnter Item Number: ");
+        cpg::yellow("\nEnter Item Number: ");
         std::cin >> item;
 
         std::cin.clear();

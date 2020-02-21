@@ -42,13 +42,13 @@ void mathematics()
         &subtract,
         &sumRange};
 
-    cyan("\nItems:\n");
+    cpg::cyan("\nItems:\n");
     for (int i = 0; i <= 14; ++i)
     {
         std::cout << i << "\t" << items[i] << std::endl;
     }
 
-    yellow("\nEnter Item Number: ");
+    cpg::yellow("\nEnter Item Number: ");
     std::cin >> item;
 
     std::cin.clear();
@@ -59,15 +59,15 @@ void mathematics()
         std::cin.clear();
         std::cin.ignore(INT_MAX, '\n');
 
-        red("\nInvalid Item Number!\n");
+        cpg::red("\nInvalid Item Number!\n");
 
-        cyan("\nItems:\n");
+        cpg::cyan("\nItems:\n");
         for (int i = 0; i <= 14; ++i)
         {
             std::cout << i << "\t" << items[i] << std::endl;
         }
 
-        yellow("\nEnter Item Number: ");
+        cpg::yellow("\nEnter Item Number: ");
         std::cin >> item;
 
         std::cin.clear();
