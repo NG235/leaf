@@ -6,6 +6,7 @@
 #include "mathematics/factorial.cpp"
 #include "mathematics/multiply.cpp"
 #include "mathematics/percentage.cpp"
+#include "mathematics/power.cpp"
 #include "mathematics/rectangle_area.cpp"
 #include "mathematics/rectangle_perimeter.cpp"
 #include "mathematics/square_area.cpp"

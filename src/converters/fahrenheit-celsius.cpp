@@ -11,7 +11,7 @@ void fahrenheitCelsius()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter temperature to convert (f): ";
         std::cin >> input;

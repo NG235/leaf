@@ -12,7 +12,7 @@ void sumRange()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter start of range: ";
         std::cin >> start;
@@ -27,7 +27,7 @@ void sumRange()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter end of range: ";
         std::cin >> end;

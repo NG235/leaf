@@ -11,7 +11,7 @@ void squareArea()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter the length of one side: ";
         std::cin >> side;

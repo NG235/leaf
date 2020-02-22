@@ -11,7 +11,7 @@ void multiply()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter first number to multiply: ";
         std::cin >> input1;
@@ -26,7 +26,7 @@ void multiply()
     {
         leaf::cin.reset();
 
-        std::cout << "\033[0;31m" << "\nInvalid Input\n" << "\033[0m";
+        leaf::iiw();
 
         std::cout << "\nEnter second number to multiply: ";
         std::cin >> input2;

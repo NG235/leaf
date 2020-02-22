@@ -44,6 +44,11 @@ void cpg(Color color, std::string output)
     }
 }
 
+void iiw()
+{
+    cpg(red, "\nInvalid Input\n");
+}
+
 } // namespace leaf
 
 typedef void (*func)();
