@@ -1,4 +1,5 @@
 #include <iostream>
+#include "err.h"
 #include "types.h"
 #include "functions.h"
 
@@ -28,14 +29,12 @@ int main()
 
     cpg::yellow("\nEnter Category Number: ");
     std::cin >> category;
-    
-    std::cin.clear();
-    std::cin.ignore(INT_MAX, '\n');
+
+    err::cin.handle();
 
     while (std::cin.fail() || category < 0 || category > 2)
     {
-        std::cin.clear();
-        std::cin.ignore(INT_MAX, '\n');
+        err::cin.handle();
 
         cpg::red("\nInvalid Category Number!\n");
 
@@ -48,8 +47,7 @@ int main()
         cpg::yellow("\nEnter Category Number: ");
         std::cin >> category;
         
-        std::cin.clear();
-        std::cin.ignore(INT_MAX, '\n');
+        err::cin.handle();
     }
 
     functions[category]();

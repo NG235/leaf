@@ -25,14 +25,11 @@ void calculators()
 
     cpg::yellow("\nEnter Item Number: ");
     std::cin >> item;
-
-    std::cin.clear();
-    std::cin.ignore(INT_MAX, '\n');
+    err::cin.handle();
 
     while (std::cin.fail() || item < 0 || item > 1)
     {
-        std::cin.clear();
-        std::cin.ignore(INT_MAX, '\n');
+        err::cin.handle();
 
         cpg::red("\nInvalid Item Number!\n");
 
@@ -44,9 +41,7 @@ void calculators()
 
         cpg::yellow("\nEnter Item Number: ");
         std::cin >> item;
-
-        std::cin.clear();
-        std::cin.ignore(INT_MAX, '\n');
+        err::cin.handle();
     }
 
     functions[item]();
