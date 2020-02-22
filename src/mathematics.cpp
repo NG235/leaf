@@ -1,5 +1,4 @@
 #include <iostream>
-#include "types.h"
 #include "mathematics.h"
 
 using std::string;
@@ -42,32 +41,31 @@ void mathematics()
         &subtract,
         &sumRange};
 
-    cpg::cyan("\nItems:\n");
+    leaf::cpg(leaf::cyan, "\nItems:\n");
     for (int i = 0; i <= 14; ++i)
     {
         std::cout << i << "\t" << items[i] << std::endl;
     }
 
-    cpg::yellow("\nEnter Item Number: ");
+    leaf::cpg(leaf::yellow, "\nEnter Item Number: ");
     std::cin >> item;
-    err::cin.handle();
 
     while (std::cin.fail() || item < 0 || item > 14)
     {
-        err::cin.handle();
+        leaf::cin.reset();
 
-        cpg::red("\nInvalid Item Number!\n");
+        leaf::cpg(leaf::red, "\nInvalid Item Number!\n");
 
-        cpg::cyan("\nItems:\n");
+        leaf::cpg(leaf::cyan, "\nItems:\n");
         for (int i = 0; i <= 14; ++i)
         {
             std::cout << i << "\t" << items[i] << std::endl;
         }
 
-        cpg::yellow("\nEnter Item Number: ");
+        leaf::cpg(leaf::yellow, "\nEnter Item Number: ");
         std::cin >> item;
-        err::cin.handle();
     }
 
+    leaf::cin.reset();
     functions[item]();
 }

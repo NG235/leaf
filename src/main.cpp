@@ -1,7 +1,8 @@
 #include <iostream>
-#include "err.h"
-#include "types.h"
-#include "functions.h"
+#include "leaf.h"
+#include "calculators.cpp"
+#include "converters.cpp"
+#include "mathematics.cpp"
 
 using std::string;
 
@@ -9,7 +10,7 @@ int main()
 {
     int category;
 
-    cpg::green("\nWelcome to Leaf!\n\n");
+    leaf::cpg(leaf::green, "\nWelcome to Leaf!\n\n");
 
     string categories[] = {
         "Calculators",
@@ -21,35 +22,32 @@ int main()
         &converters,
         &mathematics};
 
-    cpg::cyan("Categories:\n");
+    leaf::cpg(leaf::cyan, "Categories:\n");
     for (int i = 0; i <= 2; ++i)
     {
         std::cout << i << "\t" << categories[i] << std::endl;
     }
 
-    cpg::yellow("\nEnter Category Number: ");
+    leaf::cpg(leaf::yellow, "\nEnter Category Number: ");
     std::cin >> category;
-
-    err::cin.handle();
 
     while (std::cin.fail() || category < 0 || category > 2)
     {
-        err::cin.handle();
+        leaf::cin.reset();
 
-        cpg::red("\nInvalid Category Number!\n");
+        leaf::cpg(leaf::red, "\nInvalid Category Number!\n");
 
-        cpg::cyan("\nCategories:\n");
+        leaf::cpg(leaf::cyan, "\nCategories:\n");
         for (int i = 0; i <= 2; ++i)
         {
             std::cout << i << "\t" << categories[i] << std::endl;
         }
 
-        cpg::yellow("\nEnter Category Number: ");
+        leaf::cpg(leaf::yellow, "\nEnter Category Number: ");
         std::cin >> category;
-        
-        err::cin.handle();
     }
 
+    leaf::cin.reset();
     functions[category]();
 
     return 0;
