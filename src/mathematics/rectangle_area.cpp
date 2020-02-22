@@ -19,7 +19,7 @@ void rectangleArea()
 
     leaf::cin.reset();
 
-    std::cout << "Enter the length of a different side: ";
+    std::cout << "\nEnter the length of a different side: ";
     std::cin >> side2;
 
     while (std::cin.fail())
@@ -28,7 +28,7 @@ void rectangleArea()
 
         leaf::iiw();
 
-        std::cout << "Enter the length of a different side: ";
+        std::cout << "\nEnter the length of a different side: ";
         std::cin >> side2;
     }
 
